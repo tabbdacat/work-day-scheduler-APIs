@@ -23,5 +23,5 @@ $(function () {
 });
 
 
-var today = dayjs();
-$('#current-day').text(today.format('dddd, MMMM D, YYYY'));
+let $today = dayjs();
+$('#current-day').text($today.format('dddd, MMMM D, YYYY'));
