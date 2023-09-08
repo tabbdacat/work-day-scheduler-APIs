@@ -22,6 +22,6 @@ $(function () {
   // TODO: Add code to display the current date in the header of the page.
 });
 
-
+  // Adds code to display the current date in the header of the page.
 let $today = dayjs();
 $('#current-day').text($today.format('dddd, MMMM D, YYYY'));
