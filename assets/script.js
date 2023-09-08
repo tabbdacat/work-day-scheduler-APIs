@@ -14,14 +14,64 @@ $(function () {
   // attribute of each time-block be used to conditionally add or remove the
   // past, present, and future classes? How can Day.js be used to get the
   // current hour in 24-hour time?
+
+  function updateHour() {
+
+    var hour = dayjs().hour();
+
+    console.log(hour);
+  
+    $('.time-block').each(function() {
+  
+    var blockHour = parseInt($(this).attr('id').split('-')[1]);
+  
+    console.log(hour);
+  
+    if (blockHour < hour) {
+      $(this).addClass('past')
+    } else if (blockHour == hour) {
+      $(this).addClass('present')
+    } else if (blockHour > hour) {
+      $(this).addClass('future')
+    }
+    });
+  
+    }
+  
+
   //
   // TODO: Add code to get any user input that was saved in localStorage and set
   // the values of the corresponding textarea elements. HINT: How can the id
   // attribute of each time-block be used to do this?
   //
-  // TODO: Add code to display the current date in the header of the page.
+
 });
 
   // Adds code to display the current date in the header of the page.
 let $today = dayjs();
 $('#current-day').text($today.format('dddd, MMMM D, YYYY'));
+
+// TODO: Add code to apply the past, present, or future class to each time
+  // block by comparing the id to the current hour. HINTS: How can the id
+  // attribute of each time-block be used to conditionally add or remove the
+  // past, present, and future classes? How can Day.js be used to get the
+  // current hour in 24-hour time?
+
+  function updateHour() {
+
+    $('.time-block').each(function() {
+      let hour = dayjs().hour();
+      let blockHour = parseInt($(this).attr('id').split('-')[1]);
+  
+    if (blockHour < hour) {
+      $(this).addClass('past')
+    } else if (blockHour === hour) {
+      $(this).addClass('present')
+    } else if (blockHour > hour) {
+      $(this).addClass('future')
+    }
+    
+    });
+    }
+
+    updateHour();
