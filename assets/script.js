@@ -26,10 +26,6 @@ $(function () {
   let $today = dayjs();
   $('#current-day').text($today.format('dddd, MMMM D, YYYY'));
 
-  // calls function to update color for current time
-  updateHour();
-});
-
 // Updates current hour box color by comparing current hour to hour id number
 function updateHour() {
   $('.time-block').each(function () {
@@ -46,3 +42,6 @@ function updateHour() {
   });
 }
 
+  // calls function to update color for current time
+  updateHour();
+});
