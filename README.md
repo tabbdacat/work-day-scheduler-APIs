@@ -15,3 +15,7 @@ Once viewing the website, you can open the Chrome DevTools by pressing Command+O
 [Link to Deployed Application](https://tabbdacat.github.io/work-day-scheduler-APIs/)
 
 ![image of deployed application](/assets/work-day-scheduler-scrnsht.jpg)
+
+## Credits
+
+Collaborated with: https://github.com/maddieeckstrom/Calendar-library-application/
